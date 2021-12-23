@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="header">
+            <h1>Text Checker</h1>
+    </div>
+    <div class="menu">
+        <h1>Escolha uma das opções abaixo:</h1>
+    <div>
+        <input type="checkbox" id="compare" name="compare" onclick="menu(this.id)">
+        <label for="compare">Compare Texts</label>
+
+        <input type="checkbox" id="lenght" name="lenght" onclick="menu(this.id)">
+        <label for="lenght">Check Lenght</label>
+    </div>
+    </div>
+
+    <div class="compareTexts" id="content1">
+        <div class="opcao">
+            <p>Ignore case?</p>
+            <input type="checkbox" name="yes" id="yes1" onclick="opcao1(this.id)">
+            <label for="yes">Yes</label>
+            <input type="checkbox" name="no" id="no1" onclick="opcao1(this.id)">
+            <label for="no">No</label>
+        </div>
+
+        <div class="entradas">
+            <textarea id="texto1" placeholder="Digite aqui o primeiro texto"></textarea>
+            <textarea id="texto2" placeholder="Digite aqui o segundo texto"></textarea>
+        </div>
+        <button class="limpar" id="clear" onclick="limpar()">Limpar</button><br>
+        <span id="span1"></span>
+    </div>
+
+    <div class="checkLenght" id="content2">
+        <div class="titles">
+            <h1>Check Lenghts</h1>
+            <p>Digite o tamanho máximo: <input type="number" class="tam" id="maxSize"></p>
+            <p>Entrada</p>
+        </div>
+        
+        <div class="info">
+            <textarea id="texto3"class="text3" placeholder="Digite o texto"></textarea>
+            <p>tamanho atual: <span id="atualLength"></span>/<span id="maxLength"></span></p>
+            <p>Status: <span id="length"></span></p>
+            <p>Tamanho atual sem espaços: <span id="atualLength2"></span>/<span id="maxLength2"></span></p>
+            <button class="limpar" id="limpar" onclick="limpar()">Limpar</button>
+        </div>
+        <br>
+
+        <div class="titles2">
+            <p>Possui saída?</p>
+            <input type="checkbox" name="yes" id="yes" onclick="output(this.id)">
+            <label for="yes">Yes</label>
+            <input type="checkbox" name="no" id="no" onclick="output(this.id)">
+            <label for="no">No</label>
+        </div>
+        
+        <div class="check" id="content3">
+            <div class="opcoes">
+                <p>Selecione o tipo de saída:</p>
+                <input type="checkbox" name="none">
+                <label for="none">None</label>
+                <input type="checkbox" name="uppercase">
+                <label for="uppercase">UPPERCASE</label>
+                <input type="checkbox" name="lowercase">
+                <label for="lowercase">lowercase</label>
+                <input type="checkbox" name="Capitalize">
+                <label for="Capitalize">Capitalize</label>
+            </div>     
+        
+            <div class="output">
+                <textarea id="texto4" class="text4" placeholder="Saída" readonly></textarea>
+                <button class="atualizar">Atualizar</button>
+            </div>
+        </div>
+        <span id="span3"></span>
+    </div>
+    
+</body>
+</html>
